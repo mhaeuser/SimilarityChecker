@@ -1,0 +1,49 @@
+##@file
+# Provides build type variant definitions for Visual Studio Code.
+#
+# Copyright (C) 2020 Marvin Häuser. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+##
+buildType:
+  default: release
+  choices:
+    debug:
+      short: Debug
+      long: Disable optimizations - include debug information.
+      buildType: Debug
+    release:
+      short: Release
+      long: Optimize for speed - exclude debug information.
+      buildType: Release
+    releasemp:
+      short: ReleaseMP
+      long: Optimize for speed and enable multithreading - exclude debug information.
+      buildType: ReleaseMP
+    minsizerel:
+      short: MinSizeRel
+      long: Optimize for smallest binary size - exclude debug information.
+      buildType: MinSizeRel
+    relwithdebinfo:
+      short: RelWithDebInfo
+      long: Optimize for speed - include debug information.
+      buildType: RelWithDebInfo
+    debugsan:
+      short: DebugSan
+      long: Disable optimizations and enable Sanitizers - include debug information.
+      buildType: DebugSan
+    relwithdebuginfo:
+      short: RelWithDebInfoSan
+      long: Optimize for speed and enable Sanitizers - include debug information.
+      buildType: RelWithDebInfoSan
+    debugunittestingsan:
+      short: DebugUnitTestingSan
+      long: Perform unit testing. Disable optimizations and enable Sanitizers - include debug information.
+      buildType: DebugUnitTestingSan
+    debugfuzztestingsan:
+      short: DebugFuzzTestingSan
+      long: Disable optimizations and enable fuzzing and Sanitizers - include debug information.
+      buildType: DebugFuzzTestingSan
+    relwithdebinfofuzztestingsan:
+      short: RelWithDebInfoFuzzTestingSan
+      long: Optimize for speed and enable fuzzing and Sanitizers - include debug information.
+      buildType: RelWithDebInfoFuzzTestingSan
