@@ -70,14 +70,14 @@ set_target_properties(
   C_EXTENSIONS OFF
   MSVC_RUNTIME_LIBRARY "MultiThreaded${msvc_rt_suffix}"
   )
-if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID MATCHES "GCC")
+if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID MATCHES "GCC" OR CMAKE_C_COMPILER_ID MATCHES "GNU")
   # When using Clang on Windows, we unfortunately need to manually silence CRT warnings.
   set(base_opts  -funsigned-char -D_CRT_SECURE_NO_WARNINGS)
   set(warn_opts  -Werror -Wall -Wextra -pedantic)
   set(san_opts   -fsanitize=undefined,address)
   set(fuzz_opts  ${san_opts},fuzzer)
 
-  if(CMAKE_BUILD_TYPE MATCHES "DebugFuzzTestingSan" AND CMAKE_C_COMPILER_ID MATCHES "GCC")
+  if(CMAKE_BUILD_TYPE MATCHES "DebugFuzzTestingSan" AND (CMAKE_C_COMPILER_ID MATCHES "GCC" OR CMAKE_C_COMPILER_ID MATCHES "GNU"))
     message(FATAL_ERROR "Fuzzing is not supported for GCC.")
   endif()
 elseif(CMAKE_C_COMPILER_ID MATCHES "MSVC")
