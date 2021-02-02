@@ -60,15 +60,12 @@ double ScLevenshteinSwap(
   //
   const sc_str_lines_info_t  *LinesInfo1;
   const sc_str_lines_info_t  *LinesInfo2;
-  size_t                     ShorterLen;
   if (File1->LinesInfo->NumLines > File2->LinesInfo->NumLines) {
     LinesInfo1 = File2->LinesInfo;
     LinesInfo2 = File1->LinesInfo;
-    ShorterLen = File2->Length;
   } else {
     LinesInfo1 = File1->LinesInfo;
     LinesInfo2 = File2->LinesInfo;
-    ShorterLen = File1->Length;
   }
   //
   // Allocate the scratch buffer on the stack to allow parallelisation.
