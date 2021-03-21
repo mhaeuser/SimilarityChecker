@@ -2,7 +2,7 @@
   Provides APIs for miscellaneous string operations.
   
   Copyright (C) 2020 Marvin Häuser. All rights reserved.
-  SPDX-License-Identifier: Apache-2.0
+  SPDX-License-Identifier: BSD-3-Clause
 */
 #ifndef SC_STRING_MISC_H_
 #define SC_STRING_MISC_H_

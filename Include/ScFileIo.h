@@ -2,7 +2,7 @@
   Provides functions to handle file I/O.
   
   Copyright (C) 2020 Marvin Häuser. All rights reserved.
-  SPDX-License-Identifier: Apache-2.0
+  SPDX-License-Identifier: BSD-3-Clause
 */
 
 #ifndef SC_FILE_IO_H_

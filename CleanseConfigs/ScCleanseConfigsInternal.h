@@ -2,7 +2,7 @@
   Provides internal declarations of cleansing configurations.
   
   Copyright (C) 2020 Marvin Häuser. All rights reserved.
-  SPDX-License-Identifier: Apache-2.0
+  SPDX-License-Identifier: BSD-3-Clause
 */
 
 #ifndef SC_CLEANSE_CONFIGS_INTERNAL_H_

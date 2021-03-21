@@ -2,7 +2,7 @@
   Provides APIs to calculate distances between text snippets.
   
   Copyright (C) 2020 Marvin Häuser. All rights reserved.
-  SPDX-License-Identifier: Apache-2.0
+  SPDX-License-Identifier: BSD-3-Clause
 */
 #ifndef SC_DISTANCES_H_
 #define SC_DISTANCES_H_
